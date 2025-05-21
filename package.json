@@ -10,8 +10,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^22.1.0",
+    "@react-native-firebase/functions": "^22.1.0",
     "react": "19.0.0",
-    "react-native": "0.79.2"
+    "react-native": "0.79.2",
+    "react-native-background-fetch": "^4.2.8",
+    "react-native-file-access": "^3.1.1",
+    "react-native-geolocation-service": "^5.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
