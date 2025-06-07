@@ -74,7 +74,7 @@ admin.initializeApp({
 // Firestore under the path /messages/:documentId/original
 
 const client = new MongoClient(
-    'mongodb+srv://ngotritoan33:yeDMQJan0cWhxaKE@lawmachine.f9sj5mz.mongodb.net/',
+    'mongodb+srv://ngotritoan33:yeDMQJan0cWhxaKE@location.bijatuf.mongodb.net/',
   );
 
   
@@ -82,8 +82,8 @@ exports.addUser = onRequest(async (req, res) => {
     if (req.method === 'POST') {
     
         try {
-          const database = client.db('data');
-          const Location = database.collection('location');
+          const database = client.db('location');
+          const Location = database.collection('database');
     
           await Location.insertOne({ name: req.body.name, location:`${req.body.latitude}, ${req.body.longitude}`,time:req.body.time });
           res.send({result: "Message with ID: added."});
@@ -96,8 +96,8 @@ exports.addUser = onRequest(async (req, res) => {
       if (req.method === 'POST') {
     
         try {
-          const database = client.db('data');
-          const Location = database.collection('location');
+          const database = client.db('location');
+          const Location = database.collection('database');
     
           Location.find({
             $or: [
