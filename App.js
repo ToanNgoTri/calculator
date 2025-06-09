@@ -275,11 +275,11 @@ function App() {
 
     BackgroundFetch.configure(
       {
-        minimumFetchInterval: 15, // thời gian lặp tối thiểu (phút)
+        minimumFetchInterval: 1, // thời gian lặp tối thiểu (phút)
         stopOnTerminate: false, // ⚠️ phải để false để hoạt động khi kill app
         startOnBoot: true, // Khởi động lại khi khởi động máy
         enableHeadless: true,
-        forceAlarmManager:true,
+        // forceAlarmManager:true,
         requiredNetworkType: BackgroundFetch.NETWORK_TYPE_NONE,
       },
       async taskId => {
